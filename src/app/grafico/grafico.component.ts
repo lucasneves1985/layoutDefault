@@ -1,52 +1,17 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { MATERIAL_SANITY_CHECKS_FACTORY } from '@angular/material/core/common-behaviors/common-module';
 import { Chart, registerables } from 'chart.js';
-
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-grafico',
+  templateUrl: './grafico.component.html',
+  styleUrls: ['./grafico.component.scss']
 })
-export class AppComponent implements OnInit {
-  title = 'LayoutDefault';
-  dados: any;
-  panelOpenState: boolean = false;
-  open: boolean = false;
-  menuClick() {
-    this.open = !this.open;
-    console.log('clicou no menu')
-  }
-
-  htmlstring: string;
-
+export class GraficoComponent implements OnInit {
   @ViewChild('grafico', {static: true}) grafico: ElementRef;
+  dados: any
 
-  modules = {
-    toolbar: [
-      ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
-      ['blockquote', 'code-block'],
-  
-      [{ 'header': 1 }, { 'header': 2 }],               // custom button values
-      [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-      [{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
-      [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
-      [{ 'direction': 'rtl' }],                         // text direction
-  
-      
-      [{ 'header': [1, 2, 3, 4, 5, 6, false] }],        // custom dropdown
-  
-      [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
-      [{ 'font': [] }],
-      [{ 'align': [] }],
-  
-      ['clean'],                                         // remove formatting button
-  
-      ['link', 'image', 'video']                         // link and image, video
-    ],
-    
-  };
+  constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     Chart.register(...registerables);
     
 
@@ -97,8 +62,7 @@ export class AppComponent implements OnInit {
           }
           
         }
-    });
+    });    
   }
-
 
 }

@@ -1,0 +1,47 @@
+@import '../node_modules/@angular/material/theming';
+
+@include mat-core();
+
+
+$mat-unimed: (
+  50: #e5f5ec,
+  100: #c0e6cf,
+  200: #98d5b1,
+  300: #6cc693,
+  400: #48b97c,
+  500: #17ad66,
+  600: #0d9e5c,
+  700: #008c4f,
+  800: #007b44,
+  900: #005b30,
+  A100: #6cc693,
+  A200: #0d9e5c,
+  A400: #008c4f,
+  A700: #005b30,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $light-primary-text,
+    A400: $light-primary-text,
+    A700: $light-primary-text,
+  )
+);
+
+
+$my-theme-primary: mat-palette($mat-unimed, 500);
+$my-theme-accent: mat-palette($mat-pink);
+$my-theme-warn: mat-palette($mat-red);
+
+
+$my-theme: mat-light-theme($my-theme-primary, $my-theme-accent, $my-theme-warn);
+
+@include angular-material-theme($my-theme);

@@ -1,0 +1,53 @@
+aside {
+    width: 250px;
+    background-color: #17ad66;
+    color: #fff;
+
+
+}
+
+mat-nav-list a {
+    color: rgba(255,255,255,0.9);
+    font-size: 14px;
+}
+
+.mat-expansion-panel-header-description, .mat-expansion-indicator::after {
+    color: #fff !important;
+}
+
+.profile-card {
+    text-align: center;
+    padding: 0 20px 20px 20px;
+    img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+}
+
+.app-nav-accordion {
+    background-color: #17ad66;  
+    color: #fff;
+    .mat-expansion-panel {
+        border-radius: 0px;
+        background-color: #17ad66;   
+        box-shadow: none;
+
+        &.mat-expansion-panel-spacing {
+            margin: 0px;
+        }
+
+        .mat-expansion-panel-header {
+            height: 40px;
+            padding: 0px 24px 0px 16px;
+        }
+
+        .mat-expansion-panel-header-title {
+
+            color: rgba(255, 255, 255);
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+}

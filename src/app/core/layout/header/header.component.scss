@@ -1,0 +1,36 @@
+.mat-menu-item {
+    color: #008c4f !important;
+}
+  
+button.mat-menu-item{
+    background-color: white;
+}
+  
+button.mat-menu-item:hover {
+    background-color: #008c4f;
+    color: #fff !important;
+}
+
+.menuItem {
+    color: #fff;
+}
+
+.menu-icon {
+    margin-right: 20px;
+}
+
+.mat-icon {
+    vertical-align: middle;
+    cursor: default;
+}
+
+ul li {
+    list-style: none;
+}
+
+  .avatar {
+    height: 100%;
+    width: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}

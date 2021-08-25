@@ -1,0 +1,15 @@
+<header flexLayout="column">
+    <app-header (toggle)="toggleMenu()"></app-header>
+</header>
+  
+
+<mat-drawer-container style="height: 100%;">
+<mat-drawer mode="side" [opened]="open">
+    <app-menu></app-menu>
+</mat-drawer>
+<mat-drawer-content>
+    <ng-content></ng-content>
+</mat-drawer-content>
+</mat-drawer-container>
+
+<footer flexLayout="column">Footer</footer>

@@ -1,0 +1,76 @@
+<mat-toolbar color="primary">
+    <mat-icon class="menu-icon" aria-hidden="false" aria-label="Example home icon" (click)="menuClick()">menu</mat-icon>
+    <span>My Application</span>
+    <button mat-button [matMenuTriggerFor]="animals">Animal index</button>
+    <mat-menu #animals="matMenu" color="primary">
+      <button mat-menu-item color="primary" [matMenuTriggerFor]="vertebrates">Vertebrates</button>
+      <button mat-menu-item color="primary" [matMenuTriggerFor]="invertebrates">Invertebrates</button>
+    </mat-menu>
+
+    <mat-menu #vertebrates="matMenu" color="primary">
+      <button mat-menu-item color="primary" [matMenuTriggerFor]="fish">Fishes</button>
+      <button mat-menu-item color="primary" [matMenuTriggerFor]="amphibians">Amphibians</button>
+      <button mat-menu-item color="primary" [matMenuTriggerFor]="reptiles">Reptiles</button>
+      <button mat-menu-item color="primary">Birds</button>
+      <button mat-menu-item color="primary">Mammals</button>
+    </mat-menu>
+
+    <mat-menu #invertebrates="matMenu">
+      <button mat-menu-item color="primary">Insects</button>
+      <button mat-menu-item color="primary">Molluscs</button>
+      <button mat-menu-item color="primary">Crustaceans</button>
+      <button mat-menu-item color="primary">Corals</button>
+      <button mat-menu-item color="primary">Arachnids</button>
+      <button mat-menu-item color="primary">Velvet worms</button>
+      <button mat-menu-item color="primary">Horseshoe crabs</button>
+    </mat-menu>
+
+    <mat-menu #fish="matMenu">
+      <button mat-menu-item color="primary">Baikal oilfish</button>
+      <button mat-menu-item color="primary">Bala shark</button>
+      <button mat-menu-item color="primary">Ballan wrasse</button>
+      <button mat-menu-item color="primary">Bamboo shark</button>
+      <button mat-menu-item color="primary">Banded killifish</button>
+    </mat-menu>
+
+    <mat-menu #amphibians="matMenu">
+      <button mat-menu-item color="primary">Sonoran desert toad</button>
+      <button mat-menu-item color="primary">Western toad</button>
+      <button mat-menu-item color="primary">Arroyo toad</button>
+      <button mat-menu-item color="primary">Yosemite toad</button>
+    </mat-menu>
+
+    <mat-menu #reptiles="matMenu">
+      <button mat-menu-item color="primary">Banded Day Gecko</button>
+      <button mat-menu-item color="primary">Banded Gila Monster</button>
+      <button mat-menu-item color="primary">Black Tree Monitor</button>
+      <button mat-menu-item color="primary">Blue Spiny Lizard</button>
+      <button mat-menu-item color="primary" disabled>Velociraptor</button>
+    </mat-menu>
+
+    <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+      <ul fxLayout="row" fxLayoutGap="20px">
+        <li>
+          <button mat-icon-button>
+            <mat-icon>settings</mat-icon>
+          </button>
+        </li>
+        <li>
+          <button mat-icon-button>
+            <mat-icon>help_outline</mat-icon>
+          </button>
+        </li>
+        <li>
+          <img [matMenuTriggerFor]="menu" class="avatar"
+            src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Soufiane FADIL">
+          <mat-menu #menu="matMenu" style="padding: 0;">
+            <button mat-menu-item >
+              <mat-icon>exit_to_app</mat-icon>
+              Sign out
+            </button>
+          </mat-menu>
+
+        </li>
+      </ul>
+    </div>
+  </mat-toolbar>
